@@ -1,16 +1,24 @@
-function About() {
-  const Card = ({ img, title, text}) => {
-    return (
-      <div className="flex-1 sm:w-[350px] sm:min-w-[350px] w-full rounded-[20px] shadow-3xl px-10 py-16 hoverBtn">
-        <div className="w-11 h-11 justify-center items-center bg-[#ff6452] rounded-full">
-          <img src={img} alt="card" width='24' height='24' className="m-auto pt-2"/>
-        </div>
-        <h1 className="mt-5 font-palanquin text-3xl leading-normal font-bold">{title}</h1>
-        <p className="mt-3 break-words text-lg leading-normal text-[slate-gray]">{text}</p>
-      </div>
-    )
-  }
+import React from 'react';
 
+interface CardProps {
+  img: string;
+  title: string;
+  text: string;
+}
+
+const Card: React.FC<CardProps> = ({ img, title, text }) => {
+  return (
+    <div className="flex-1 sm:w-[350px] sm:min-w-[350px] w-full rounded-[20px] shadow-3xl px-10 py-16 hoverBtn">
+      <div className="w-11 h-11 justify-center items-center bg-[#ff6452] rounded-full">
+        <img src={img} alt="card" width='24' height='24' className="m-auto pt-2"/>
+      </div>
+      <h1 className="mt-5 font-palanquin text-3xl leading-normal font-bold">{title}</h1>
+      <p className="mt-3 break-words text-lg leading-normal text-[slate-gray]">{text}</p>
+    </div>
+  );
+};
+
+const About: React.FC = () => {
   return (
     <>
      <div id="about" className="lg:py-24 py-12 lg:px-16 px-8">
@@ -44,9 +52,9 @@ function About() {
     </div>
     <div className="lg:px-16 px-8 py-10">
       <div className="flex justify-center flex-wrap gap-9">
-        <Card  img='truck-fast.svg' text='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam similique mollitia perspiciatis.' title='free shipping'/>
-        <Card  img='shield-tick.svg' text='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam similique mollitia perspiciatis.' title='free shipping'/>
-        <Card  img='support.svg' text='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam similique mollitia perspiciatis.' title='free shipping'/>
+        <Card img='truck-fast.svg' text='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam similique mollitia perspiciatis.' title='free shipping'/>
+        <Card img='shield-tick.svg' text='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam similique mollitia perspiciatis.' title='free shipping'/>
+        <Card img='support.svg' text='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam similique mollitia perspiciatis.' title='free shipping'/>
       </div>
     </div>
     </>
