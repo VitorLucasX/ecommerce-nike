@@ -2,7 +2,7 @@ import { GiFoodTruck } from "react-icons/gi";
 import { GrSecure } from "react-icons/gr";
 import { IoFastFood } from "react-icons/io5";
 import { default as BiryaniImg } from '/biryani5.png';
-import { default as Vector } from '/vector3.png';
+import { default as Vector } from '/public/vector3.png';
 
 function Banner() {
   const bgImage = {
