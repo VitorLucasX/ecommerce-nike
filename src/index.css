@@ -1,11 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Variáveis de cor */
+:root {
+  --bg-light: #ffffff;
+  --bg-dark: #1a1a1a;
+  --text-light: #000000;
+  --text-dark: #ffffff;
+}
+
+/* Estilos para o tema claro */
+body {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+/* Estilos para o tema escuro */
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+/* Classes utilitárias */
+.bg-light {
+  background-color: var(--bg-light);
+}
+
+.bg-dark {
+  background-color: var(--bg-dark);
+}
+
+.text-light {
+  color: var(--text-light);
+}
+
+.text-dark {
+  color: var(--text-dark);
+}
+
+/* Ajustes específicos para dark mode */
+.dark .bg-light {
+  background-color: var(--bg-dark);
+}
+
+.dark .text-light {
+  color: var(--text-dark);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0 deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin {
+  animation: spin 40s linear infinite;
 }
