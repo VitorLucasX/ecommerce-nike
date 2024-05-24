@@ -41,7 +41,11 @@ function Hero() {
       <div className='container pb-8 sm:pb-0'>
         <div className='grid grid-cols-1 sm:grid-cols-2'>
           {/* text content section */}
-          <div className='flex flex-col justify-center gap-4 pt-12 sm:pt-0 text-center sm:text-left order-2 sm:order-1'>
+          <div 
+          data-aos="zoom-out"
+          data-aos-duration="400"
+          data-aos-once="true"
+          className='flex flex-col justify-center gap-4 pt-12 sm:pt-0 text-center sm:text-left order-2 sm:order-1'>
             <h1 className='text-5xl sm:text-6xl lg:text-7xl font-bold'>
               Bem vindo ao Sky Asia
             </h1>

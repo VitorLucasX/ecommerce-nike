@@ -53,7 +53,10 @@ function Services() {
             {ServicesData.map(({ id, img, name, description}) => {
               return (
                 <div key={id} 
-                 className='max-w-[300px] group rounded-2xl
+                  data-aos="zoom-out"
+                  data-aos-duration="400"
+                  data-aos-once="true"
+                  className='max-w-[300px] group rounded-2xl
                  bg-white dark:bg-[#242424] dark:text-white hover:text-white hover:bg-secondary dark:hover:bg-secondary duration-300 shadow-xl'
                  >
                 <div className='h-[100px]'>
